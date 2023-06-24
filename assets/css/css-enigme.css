@@ -33,19 +33,20 @@ section[class="introduction"] .content {
 
 /* style for the paragraph in introduction */
 section[class="introduction"] p {
-    width: 32vw;
+    width: 30vw;
     text-align: justify;
     background-image: url('../images/enigme/Pantherenigme2.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 4em -5em;
     padding: 22%;
 }
 
-section[class="ligne"] {
-    position: absolute;
-    right: 0;
-    bottom: 5%;
+section[class="introduction"] p img {
+    margin-left: 50%;
+    width: 15%;
 }
+
 /*
     || STYLE FOR ENIGME SECTION
 */

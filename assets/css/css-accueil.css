@@ -1,41 +1,6 @@
 /*
     || SPECIFICS CSS FOR HOME
 */
-
-aside {
-    height: 30vw;
-    display: grid;
-    width: 1vw;
-    border-left: 3px solid #9E91B7;
-    float: left;
-    position: absolute;
-    top:  0;
-    left: 4vw;
-    display: grid;
-    grid-template-rows: 2fr 1fr;
-    position: fixed;
-    transition: transform 0.3s ease-in-out;
-}
-
-aside .ligne {
-    grid-row: 1;
-    border-right: 3px solid #9E91B7;
-    width: 50%;
-}
-
-aside .social-networks {
-    grid-row: 2;
-    margin-left: -30%;
-}
-
-aside ul li {
-    margin-top: 5%;
-}
-
-aside ul li:hover {
-    filter: brightness(0) invert(1);
-}
-
 /*
     || STYLE FOR INTRODUCTION SECTION
 */
@@ -92,7 +57,7 @@ section[class="presentation"] .wrapper .img-1 {
 }
 
 section[class="presentation"] .wrapper .img-1 img {
-    width: 100%;
+    height: 25vw;
     margin-top: -15%;
 }
 
@@ -100,6 +65,7 @@ section[class="presentation"] .wrapper .part-1 {
     grid-column: 2/3;
     padding: 3%;
     position: relative;
+    text-align: justify;
 }
 
 section[class="presentation"] .wrapper .img-2 {
@@ -107,38 +73,35 @@ section[class="presentation"] .wrapper .img-2 {
 }
 
 section[class="presentation"] .wrapper .img-2 img {
-    width: 100%;
+    height: 18vw;
 }
 
 section[class="presentation"] .wrapper .part-2 {
     grid-column: 4/5;
     padding: 3%;
     position: relative;
+    text-align: justify;
 }
 
 section[class="presentation"] .wrapper .img-3 {
     grid-column: 5/6;
-    position: relative;
 }
 
 
-section[class="presentation"] .wrapper .img-3 a {
-    position: absolute;
-    right: 25%;
-    top: 25%;
-    padding: 10% 15%;
+p[id='more-persons'] {
+    padding: 10% 12%;
     background-color: #021740;
     border-radius: 50%;
-    text-decoration: none;
+    cursor: pointer;
 }
 
 section[class="presentation"] .wrapper .img-3 img {
-    width: 110%;
+    height: 18vw;
 }
 
 section[class="presentation"] .wrapper>div>a[class='plus'] {
     position: absolute;
-    bottom: 20%;
+    bottom: 30%;
     left: 5%;
 }
 
@@ -214,7 +177,7 @@ section[class='stories'] .wrapper .profile .black-img img {
     || STYLE FOR CONTACT SECTION
 */
 section[class='contact'] {
-    background-image: url('../images/accueil/Pantherhome7.png');
+    background-image: url('../images/accueil/Pantherhome4.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 40vw;
@@ -267,4 +230,13 @@ section[class='contact'] .content button {
     border: none;
     padding: 2% 5% 4% 5%;
     background-color: #F2CEF2;
+}
+
+.voir-plus {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.voir-plus:hover {
+    font-weight: bolder;
 }

@@ -39,7 +39,7 @@
         
     </header>
     <!-- SIDE BAR -->
-    <aside id="logo-container">
+    <aside id="logo-container" class="fade-in-top">
         <div class="ligne">
             
         </div>
@@ -72,12 +72,12 @@
     <main>
         <!-- INTRODUCTION SECTION -->
         <section class="introduction">
-            <h1 id="script">BLACK PANTHER</h1>
-            <h2>WAKANDA FOREVER</h2>
-            <p class="text-citation">
+            <h1 class="fade-in-start" id="script">BLACK PANTHER</h1>
+            <h2 class="fade-in-start">WAKANDA FOREVER</h2>
+            <p class="text-citation fade-in-start">
                 En plus d'être un film qui fait la part belle aux héroïnes, Black Panther rend hommage aux cultures africaine et afro américaine. On y évoque le racisme, la colonisation et les violences contre les afro américains.Ce film marque tout une génération, c’est 100% africain et c’est parfait
             </p>
-            <a href="">Voir plus ></a>
+            <p id="btn-to-prince-born" class="voir-plus fade-in-start" href="">Voir plus ></p>
         </section>
         <!-- PRESENTATION SECTION -->
         <section class="presentation">
@@ -88,33 +88,36 @@
             <div class="wrapper">
                 <!-- COLUMN 1: EMPTY -->
                 <!-- COLUMN 2: IMG 1  -->
-                <div class="img-1">
-                    <img src="./assets/images/accueil/Pantherhome2.png" alt="Photo de Killmonger avec ses arme">
+                <div class="img-1 fade-in" id="selected-image">
+                    <!-- selected image -->
                 </div>
                 <!-- COLUMN 3: TEXT 1-->
-                <div class="part-1">
-                    <h2 class="titre">KILLMONGER</h2>
-                    <p class="text-citation">
-                        La sauvagerie de N'Jadaka alors qu'il servait dans une unité d'opérations noires de l'armée américaine lui a valu le surnom de Killmonger. D’origine Wakandaise, et se sentant abandoné par sa nation, il cherche à détroner T’Challa dans une quête vers le pourvoir.
+                <div class="part-1 fade-in">
+                    <h2 class="titre" id="selected-title">
+                        <!-- selected title -->
+                    </h2>
+                    <p class="text-citation" id="selected-text">
+                        <!-- selected text -->
                     </p>
                     <a class="plus" href="">Voir plus ></a>
                 </div>
                 <!-- COLUMN 4: IMG 2 -->
-                <div class="img-2">
-                    <img src="./assets/images/accueil/Pantherhome3.png" alt="Photo de Dora Milaje">
+                <div class="img-2 fade-in" id="image-2">
+                    <img src="" alt="">
                 </div>
                 <!-- COLUMN 5: TEXT 2 -->
-                <div class="part-2">
-                    <h2 class="titre">OKOYE</h2>
-                    <p class="text-citation">
-                        Okoye est le général des Dora Milaje (groupe d’élite de femmes guerrières) et le chef des forces armées et des renseignements wakandais. Témoin du couronnement de T'Challa, elle se joint à lui dans de nombreuses aventures
+                <div class="part-2 fade-in">
+                    <h2 class="titre" id="title-2">
+                        <!-- image 2 -->
+                    </h2>
+                    <p class="text-citation" id="text-2">
+                        <!-- text 2 -->
                     </p>
                     <a class="plus" href="">Voir plus ></a>
                 </div>
                 <!-- COLUMN 6: IMG 3 -->
-                <div class="img-3">
-                    <img src="./assets/images/accueil/Pantherhome4.png" alt="Photo de la soeur de T'Challa">
-                    <a href="">></a>
+                <div class="img-3 fade-in" id="image-3">
+                    
                 </div>
             </div>
         </section>
@@ -124,8 +127,8 @@
             <!-- GRID WRAPPER: 4 COLUMNS -->
             <div class="wrapper">
                 <!-- COLUMN 1: DESCRIPTON, TEXT -->
-                <div class="part-text">
-                    <div class="prince-born">
+                <div class="part-text" id="prince-born">
+                    <div class="prince-born fade-in">
                         <h2 class="titre">Naissance d’un prince</h2>
                         <div class="part-1">
                             <p class="text">
@@ -145,7 +148,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="vengeful-hero">
+                    <div class="vengeful-hero fade-in">
                         <h2 class="titre">un heros vengeur</h2>
                         <div class="part-1">
                             <p class="text-citation">
@@ -178,7 +181,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="protector-hero">
+                    <div class="protector-hero fade-in">
                         <h2 class="titre">un heros PROTECTEUR ET JUSTICIER</h2>
                         <div class="part-1">
                             <p class="text-citation">
@@ -210,7 +213,7 @@
                     <!-- ROW 1: EMPTY -->
                     <!-- ROW 2: CARD PROFILE -->
                     <div class="card">
-                        <img src="./assets/images/accueil/Pantherhome5.png" alt="Photo de T’Challa, alias 'Panther noir'">
+                        <img src="./assets/images/accueil/Pantherhome3.png" alt="Photo de T’Challa, alias 'Panther noir'">
                         <h3>T’Challa</h3>
                         <div class="btn">
                             <button>
@@ -236,7 +239,7 @@
                     <!-- ROW 3: EMPTY -->
                     <!-- ROW 4: IMAGE -->
                     <div class="black-img">
-                        <img src="./assets/images/accueil/Pantherhome6.png" alt="Photos de Black Panther avec son costume">
+                        <img src="./assets/images/accueil/Pantherhome2.png" alt="Photos de Black Panther avec son costume">
                     </div>
                 </div>
             </div>
@@ -246,15 +249,15 @@
         <section class="contact">
             <!-- CONTACT FORM'S -->
             <form class="content">
-                <p>Besoin de l’intervention du Wakanda ?</p>
-                <p class="title">Contactez nous ! </p>
+                <p class="fade-in">Besoin de l’intervention du Wakanda ?</p>
+                <p class="title fade-in">Contactez nous ! </p>
                 <!-- Input for nom: required -->
-                <input required type="text" name="nom" placeholder="Nom"><br><br>
-                <input required type="email" name="email" placeholder="Email"> <br><br>
-                <textarea required placeholder="Message">Message</textarea>
+                <input class="fade-in" required type="text" name="nom" placeholder="Nom"><br><br>
+                <input class="fade-in" required type="email" name="email" placeholder="Email"> <br><br>
+                <textarea class="fade-in" required placeholder="Message">Message</textarea>
                 <br>
                 <!-- BUTTON FOR SUBMITING FORMS VALUES -->
-                <button type="submit">ENVOYER</button>
+                <button class="fade-in" type="submit">ENVOYER</button>
             </form>
         </section>
     </main>
@@ -303,7 +306,7 @@
             </div>
             <!-- COL 1-2 / ROW 2: COPYRIGHT -->
             <div class="part-2-3">
-                <p class="text-footer">2022 Tous droits réservés Politique de confidentialité Conditions d’utilisation</p>
+                <p class="text-footer">2023 Tous droits réservés Politique de confidentialité Conditions d’utilisation</p>
             </div>
         </div>
     </footer>
@@ -313,6 +316,7 @@
             <span class="message">OPERATION REUSSI !</span>
         </div>
     </div>
+    <script src="./assets/js/landing-script.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
