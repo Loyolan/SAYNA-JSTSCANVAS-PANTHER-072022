@@ -58,7 +58,7 @@ section[class="presentation"] .wrapper .img-1 {
 
 section[class="presentation"] .wrapper .img-1 img {
     height: 25vw;
-    margin-top: -15%;
+    margin-top: -20%;
 }
 
 section[class="presentation"] .wrapper .part-1 {
@@ -85,14 +85,18 @@ section[class="presentation"] .wrapper .part-2 {
 
 section[class="presentation"] .wrapper .img-3 {
     grid-column: 5/6;
+    position: relative;
 }
 
 
-p[id='more-persons'] {
+#more-person {
     padding: 10% 12%;
     background-color: #021740;
     border-radius: 50%;
     cursor: pointer;
+    position: absolute;
+    top: 25%;
+    right: 15%;
 }
 
 section[class="presentation"] .wrapper .img-3 img {
@@ -101,7 +105,7 @@ section[class="presentation"] .wrapper .img-3 img {
 
 section[class="presentation"] .wrapper>div>a[class='plus'] {
     position: absolute;
-    bottom: 30%;
+    bottom: 18%;
     left: 5%;
 }
 
