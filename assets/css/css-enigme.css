@@ -51,9 +51,6 @@ section[class="introduction"] p img {
     || STYLE FOR ENIGME SECTION
 */
 p[class='wakanda-forever'] {
-    font-family: 'Wakanda Forever';
-    font-size: 1.75em;
-    letter-spacing: 0.25em;
     color: #9E91B7;
 }
 
@@ -73,11 +70,12 @@ section[class='enigme'] .response .transcription {
 
 section[class='enigme'] .response .know {
     grid-column: 3/4;
-    background-image: url('../images/enigme/Pantherenigme2.png');
+    background-image: url('../images/enigme/Pantherenigme4.png');
     padding: 5%;
     text-align: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size:  50vw 30vw;
+    background-position: 0 30%;
     padding: 17% 13% 15% 15%;
 }
 
@@ -108,4 +106,78 @@ section[class='enigme'] .transcription button {
     background-color: #F2CEF2;
     margin-top: 5em;
     font-size: 1em;
+}
+
+p[class='text-intro'] {
+    width: 40vw;
+}
+
+
+/* Effet de surbrillance */
+button:hover {
+    box-shadow: 0px 8px 16px 0px #ddd;
+    cursor: pointer;
+}
+
+/*
+    || POPUP BOX
+*/
+.popup-message {
+    display: none; /* hidden element */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* 100% of width screen */
+    height: 100%; /* 100% of height screen */
+    background: radial-gradient(126.67% 350.28% at -21.35% 0%, #11213F 0%, #0B0B0B 39.1%, rgba(2, 23, 64, 0.837641) 94.57%, rgba(2, 23, 64, 0) 100%);
+    opacity: 0.99; /* set opacity to 0.99 (dark) */
+    z-index: 9999;
+}
+
+.popup-content {
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(126.67% 350.28% at -21.35% 0%, #11213F 0%, #0B0B0B 39.1%, rgba(2, 23, 64, 0.837641) 94.57%, rgba(2, 23, 64, 0) 100%);    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 3fr 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    border-radius: 5%;
+}
+
+#popup-title {
+    grid-row: 1;
+    font-family: 'Cantarell';
+    font-size: 1em;
+    color: white;
+}
+
+#message {
+    grid-row: 2;
+    font-size: 0.70em;
+    text-transform: capitalize;
+    color: #aaa;
+    padding: 0 10%;
+}
+
+#restart-game {
+    grid-row: 3;
+    height: 3.5vw;
+    width: 20vw;
+    margin-left: 25%;
+    margin-top: -25%;
+    border-radius: 3em;
+    border: none;
+    padding: 3% 5% 5% 5%;
+    background-color: #F2CEF2;
+    margin-top: 5em;
+    font-size: 0.75em;
 }

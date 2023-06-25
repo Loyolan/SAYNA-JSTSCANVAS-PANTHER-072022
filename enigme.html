@@ -81,16 +81,16 @@
             </div> 
         </section>
         <section class="enigme">
-            <p class="wakanda-forever">
-                 <span class="fade-in">“ SI JE SUIS FIDELE C’EST A CE TRONE <br> PEU IMPORTE QUI MONTE DESSUS ”</span>
+            <h2><u>ENIGME NUMERO <span id="progress" style="font-family: 'Cantarell';"></span></u></h2>
+            <p class="text-intro" id="text-intro">
+                
             </p>
             <div class="response">
                 <div class="transcription">
-                    <p class="text fade-in">Voici la transicription de l’alphabet :</p>
-                    <p class="trans fade-in">
-                        A = <span class="wf">A</span> ; B = <span class="wf">B</span> ; C = <span class="wf">C</span> ; D = <span class="wf">D</span> ; E = <span class="wf">E</span> ; F = <span class="wf">F</span> ; G = <span class="wf">G</span> ; H = <span class="wf">H</span> ; I = <span class="wf">I</span> ; J = <span class="wf">J</span> ; K = <span class="wf">K</span> ; L = <span class="wf">L</span> ; M = <span class="wf">M</span> ; N = <span class="wf">N</span> ; O = <span class="wf">O</span> ; P = <span class="wf">P</span> ; Q = <span class="wf">Q</span> ; R = <span class="wf">R</span> ; S = <span class="wf">S</span> ; T = <span class="wf">T</span> ; U = <span class="wf">U</span> ; W = <span class="wf">W</span> ; X = <span class="wf">X</span> ; Y = <span class="wf">Y</span> ; Z = <span class="wf">Z</span>
+                    <p class="wakanda-forever">
+                        <span class="fade-in" id='text-enigme'></span>
                     </p>
-                    <form class="in-res fade-in">
+                    <form class="in-res fade-in" id="form-response-enigme">
                         <p>Alors, as tu la réponse ?</p>
                         <input required type="text" name="res" placeholder="Réponse">
                         <div class="center">
@@ -98,10 +98,12 @@
                         </div>
                     </form>
                 </div>
-                <div class="know text-citation fade-in">
-                    <p>Le savais tu ? </p>
+                <div class="know fade-in text-citation">
+                    <p id="title-know"></p>
                     <div class="content">
-                        Plusieurs sources s’entendent pour dire que la lettre la plus utilisée en français est la lettre E. En pourcentage de fréquence, la lettre est utilisée à 14% dans une phrase. Et si tu regardais quel symbole revient le plus souvent ? 
+                        <p class="trans fade-in" id="text-know">
+                            
+                        </p>
                     </div>
                 </div>
             </div>
@@ -152,7 +154,9 @@
     </footer>
     <div class="popup-message">
         <div class="popup-content">
-            <span class="message">OPERATION REUSSI !</span>
+            <h2 id="popup-title"></h2>
+            <p class="message" id="message"></p>
+            <button id="restart-game">RECOMMENCER</button>
         </div>
     </div>
     <script src="./assets/js/script.js"></script>
