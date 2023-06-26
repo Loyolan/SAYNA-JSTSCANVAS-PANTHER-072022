@@ -129,7 +129,7 @@ button:hover {
     left: 0;
     width: 100%; /* 100% of width screen */
     height: 100%; /* 100% of height screen */
-    background: radial-gradient(126.67% 350.28% at -21.35% 0%, #11213F 0%, #0B0B0B 39.1%, rgba(2, 23, 64, 0.837641) 94.57%, rgba(2, 23, 64, 0) 100%);
+    background: linear-gradient(to bottom, rgba(64, 40, 80, 1.0), rgba(2, 23, 64, 1.0));
     opacity: 0.99; /* set opacity to 0.99 (dark) */
     z-index: 9999;
 }
@@ -141,7 +141,8 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: radial-gradient(126.67% 350.28% at -21.35% 0%, #11213F 0%, #0B0B0B 39.1%, rgba(2, 23, 64, 0.837641) 94.57%, rgba(2, 23, 64, 0) 100%);    padding: 20px;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 10%, rgba(242, 206, 242, .1) 90%);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -164,7 +165,7 @@ button:hover {
     grid-row: 2;
     font-size: 0.70em;
     text-transform: capitalize;
-    color: #aaa;
+    color: #ddd;
     padding: 0 10%;
 }
 

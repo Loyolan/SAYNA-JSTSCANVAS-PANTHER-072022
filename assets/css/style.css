@@ -224,13 +224,10 @@ footer ul {
 }
 
 footer {
-    background-image: url('../images/all/back_footer.png');
-    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, #3D2DA6, #021740);
     margin-left: -1%;
     height: 40vw;
     width: 100vw;
-    background-size: 100vw 40vw;
-    /* GRID */
     display: grid; /* Define display grid */
     grid-template-columns: 1fr 1fr; /* Grid contains 2 columns (1/2 width, 1/2 width) */
     grid-template-rows: 1fr 4fr; /* Grid contains 2 rows (1/5 height, 4/5 height) */
@@ -364,4 +361,11 @@ footer .part-2-2 img:hover {
 h1:hover, h2:hover {
     transform: scale(1.1);
     transition: transform 2s ease-in-out;
+}
+
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
 }

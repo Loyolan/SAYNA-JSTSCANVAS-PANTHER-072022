@@ -6,7 +6,9 @@ let titleKnow = document.getElementById('title-know');
 let textKnow = document.getElementById('text-know');
 let formResponseEnigme = document.getElementById('form-response-enigme');
 const popup = document.querySelector(".popup-message");
+const comming = document.querySelector(".popup-comming");
 const restartGame = document.getElementById('restart-game');
+let restart = true;
 
 let dataEnigme = [
     {
@@ -84,7 +86,16 @@ function showPopUp(t, m) {
     popup.style.display = "block";
 }
 
+function showPopUpComming(t, m) {
+    let popupTitle = document.getElementById('popup-title');
+    let message = document.getElementById('message');
+    message.innerHTML = m;
+    popupTitle.innerHTML = t;
+    popup.style.display = "block";
+}
+
 formResponseEnigme.addEventListener('submit', (event) => {
+  restartGame.innerHTML = 'RESTART GAME';
   event.preventDefault();
   if(!verifyResponse(p)) {
     if (p == 1){
@@ -102,9 +113,14 @@ formResponseEnigme.addEventListener('submit', (event) => {
     }
   } else {
     if(p<3){
+        restart = false;
+        restartGame.innerHTML = 'QUESTION SUIVANTE';
+        let t = 'BRAVO';
+        let m = 'Tu as trouvé la réponse. Es tu prêt pour l’énigme suivante ?';
+        showPopUp(t, m);
         changeContent(dataEnigme[p]);
     } else {
-        let t = 'BRAVO';
+        let t = 'PARFAIT';
         let m = 'BIEN JOUE!!! VOUS AVEZ DECROCHER LE GROT LOT.';
         showPopUp(t, m);
     }
@@ -112,7 +128,12 @@ formResponseEnigme.addEventListener('submit', (event) => {
 });
 
 restartGame.addEventListener('click', ()=>{
-    p = 0;
-    popup.style.display = "none";
-    changeContent(dataEnigme[p]);
+    if(restart) {
+        p = 0;
+        popup.style.display = "none";
+        changeContent(dataEnigme[p]);
+    } else {
+        restart = true;
+        popup.style.display = "none";
+    }
 });

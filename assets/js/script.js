@@ -59,3 +59,62 @@ window.addEventListener('scroll', handleScrollFadeZoom);
 
 // Appelez la fonction handleScrollFadeZoom 
 handleScrollFadeZoom();
+
+/** 
+ *  || ANIMATION CANVAS
+ */
+// Get the canvas context
+/** 
+ *  || ANIMATION CANVAS
+ */
+// Get the canvas context
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+// Set the canvas position to fill the entire window
+canvas.style.top = 0;
+canvas.style.left = 0;
+canvas.style.width = "100vw";
+canvas.style.height = "100vh";
+
+// Create an object to store mouse coordinates
+const mouse = {
+    x: 0,
+    y: 0,
+};
+
+// Load the image
+const image = new Image();
+image.src = "assets/images/all/logo_souris_BP2_blanc.png";
+image.style.width = '1em';
+image.style.height = '1em';
+// Define the desired size of the image
+const imageSize = {
+    width: 50,
+    height:50,
+};
+
+// Listen for mouse movement event
+document.addEventListener("mousemove", function (event) {
+    mouse.x = event.clientX;
+    mouse.y = event.clientY;
+});
+
+// Draw the image at the mouse coordinates
+function drawImage() {
+    // Clear the canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw the image at the mouse coordinates
+    const imageX = mouse.x - imageSize.width / 2;
+    const imageY = mouse.y - imageSize.height / 2;
+    ctx.drawImage(image, imageX, imageY, imageSize.width, imageSize.height);
+}
+
+// Wait for the image to load before drawing it
+image.onload = function () {
+    drawImage();
+};
+
+// Redraw the image on mouse movement
+document.addEventListener("mousemove", drawImage);
