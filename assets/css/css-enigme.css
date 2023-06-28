@@ -122,7 +122,7 @@ button:hover {
 /*
     || POPUP BOX
 */
-.popup-message {
+.popup-comming, .popup-message {
     display: none; /* hidden element */
     position: fixed;
     top: 0;
@@ -134,6 +134,9 @@ button:hover {
     z-index: 9999;
 }
 
+/*.popup-comming {
+    display: block;
+}*/
 .popup-content {
     position: absolute;
     width: 40%;
@@ -154,6 +157,10 @@ button:hover {
     border-radius: 5%;
 }
 
+.popup-comming .popup-content {
+    grid-template-rows: 1fr 1fr 5fr;
+}
+
 #popup-title {
     grid-row: 1;
     font-family: 'Cantarell';
@@ -167,6 +174,35 @@ button:hover {
     text-transform: capitalize;
     color: #ddd;
     padding: 0 10%;
+}
+
+#return-home {
+    grid-row: 2;
+    height: 3.5vw;
+    width: 20vw;
+    margin-left: 25%;
+    margin-top: 1em;
+    border-radius: 3em;
+    border: none;
+    padding: 3% 5% 5% 5%;
+    background-color: #F2CEF2;
+    font-size: 0.75em;
+}
+
+#comming {
+    display: grid;
+    grid-row: 3;
+    grid-template-columns: 1fr 5fr;
+}
+
+#img-comming {
+    grid-column: 1/2;
+    margin-top: 50%;
+    margin-left: 50%;
+}
+
+#text-comming {
+    grid-column: 2/3;
 }
 
 #restart-game {

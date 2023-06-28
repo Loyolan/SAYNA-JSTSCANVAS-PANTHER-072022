@@ -8,6 +8,7 @@ let formResponseEnigme = document.getElementById('form-response-enigme');
 const popup = document.querySelector(".popup-message");
 const comming = document.querySelector(".popup-comming");
 const restartGame = document.getElementById('restart-game');
+const returnHome = document.getElementById('return-home');
 let restart = true;
 
 let dataEnigme = [
@@ -86,12 +87,30 @@ function showPopUp(t, m) {
     popup.style.display = "block";
 }
 
+function navigateToPage(url) {
+  window.location.href = url;
+}
+
+returnHome.addEventListener('click', ()=>{
+    navigateToPage('index.html');
+});
+
 function showPopUpComming(t, m) {
-    let popupTitle = document.getElementById('popup-title');
-    let message = document.getElementById('message');
-    message.innerHTML = m;
-    popupTitle.innerHTML = t;
-    popup.style.display = "block";
+    comming.style.display = "block";
+    let count = 60;
+    let counter = document.getElementById('counter');
+    counter.innerHTML = count;
+    const interval = setInterval(() => {
+      count--;
+      if(count == 0) {
+        navigateToPage('index.html');
+      }
+      if(count > 9) {
+        counter.textContent = count;
+      } else {
+        counter.textContent = '0'+ count;
+      }
+    }, 1000);
 }
 
 formResponseEnigme.addEventListener('submit', (event) => {
@@ -120,9 +139,7 @@ formResponseEnigme.addEventListener('submit', (event) => {
         showPopUp(t, m);
         changeContent(dataEnigme[p]);
     } else {
-        let t = 'PARFAIT';
-        let m = 'BIEN JOUE!!! VOUS AVEZ DECROCHER LE GROT LOT.';
-        showPopUp(t, m);
+        showPopUpComming();
     }
   }
 });
